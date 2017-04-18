@@ -94,6 +94,18 @@ public class LoginActivity extends Activity implements View.OnClickListener{
                 }
             }
         });
+
+
+        new Thread(){
+            public void run() {
+                mSendCode.setText("99999999999");
+                try {
+                    sleep(9000);
+                } catch (InterruptedException e) {
+                    e.printStackTrace();
+                }
+            }
+        }.start();
     }
 
     @Override
